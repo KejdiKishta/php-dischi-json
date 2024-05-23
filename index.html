@@ -11,6 +11,9 @@ Solo a questo punto sarà utile passare alla lettura della lista da un file JSON
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify</title>
 
+    <!-- Favicon -->
+    <link rel="icon" href="./spotify-logo-png-7053.png" type="image/png">
+
     <!-- Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -25,24 +28,21 @@ Solo a questo punto sarà utile passare alla lettura della lista da un file JSON
 </head>
 <body class="ms_bg_body">
     <div id="app">
-        <!-- <ul class="p-0">
-            <li v-for="disc in discs">
-                <img :src="disc.poster" :alt="disc.title">
-                <div class="text-white">
-                    <h4>{{ disc.title }}</h4>
-                    <div>{{ disc.author }}</div>
-                    <h4>{{ disc.year }}</h4>
-                </div>
-            </li>
-        </ul> -->
+        <nav class="navbar ms_bg_navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="./spotify-logo-png-7053.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top ms_logo">
+                </a>
+            </div>
+        </nav>
         <div class="container">
             <div class="row flex-wrap justify-content-between">
-                <div class="col-3 m-2 p-5 rounded ms_bg_card" v-for="disc in discs">
+                <div class="col-3 mx-2 my-5 px-5 py-4 rounded ms_bg_card" v-for="disc in discs">
                     <img :src="disc.poster" :alt="disc.title">
                     <div class="text-white text-center mt-3">
-                        <h4>{{ disc.title }}</h4>
-                        <div>{{ disc.author }}</div>
-                        <h4>{{ disc.year }}</h4>
+                        <h5 class="fw-bold">{{ disc.title }}</h5>
+                        <div class="py-2">{{ disc.author }}</div>
+                        <h5 class="fw-bold">{{ disc.year }}</h5>
                     </div>    
                 </div>
             </div>
