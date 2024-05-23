@@ -1,8 +1,12 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.ms_bg_body {
+    background-color: rgb(29 45 60);
+    padding: 50px;
 }
 
 a {
@@ -12,4 +16,15 @@ a {
 
 ul {
     list-style-type: none;
+}
+
+.ms_bg_card {
+    background-color: rgb(17 32 48);
+}
+
+img {
+    max-width: 100%;
+
+    /* debug */
+    width: 300px;
 }
